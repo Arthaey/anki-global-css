@@ -17,6 +17,7 @@ def replaceCssForAllModels():
         css = file.read()
         for model in mw.col.models.all():
             model["css"] = css
+            model["usn"] = -1
         mw.col.models.flush()
 
 
