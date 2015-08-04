@@ -13,22 +13,36 @@ from aqt.utils import showInfo
 
 STYLESHEET_FILENAME = "_global.css"
 
-def replaceCssForAllModels():
+
+def replaceCssForAllModels(manuallyTrigger=False):
     mediaDir = mw.col.media.dir()
     filename = unicode(os.path.join(mediaDir, STYLESHEET_FILENAME))
+
     with open(filename, "r") as file:
         css = file.read()
+        updated = False
+
         for model in mw.col.models.all():
-            # TODO: check whether it's changed
-            model["css"] = css
-            model["usn"] = -1
-        mw.col.save("Global CSS Updated")
-        mw.col.reset()
-    showInfo("Global CSS updated.")
+            oldCss = model["css"]
+            if oldCss != css:
+                model["css"] = css
+                model["usn"] = -1
+                updated = True
+
+        if updated:
+            mw.col.save("Global CSS Updated")
+            mw.col.reset()
+            showInfo("Global CSS updated.")
+        elif manuallyTrigger:
+            showInfo("Global CSS is already up-to-date.")
+
+
+def _manuallyReplaceCssForAllModels():
+    replaceCssForAllModels(manuallyTrigger=True)
 
 
 addHook("profileLoaded", replaceCssForAllModels)
 
 action = QAction("Update global CSS", mw)
-mw.connect(action, SIGNAL("triggered()"), replaceCssForAllModels)
+mw.connect(action, SIGNAL("triggered()"), _manuallyReplaceCssForAllModels)
 mw.form.menuTools.addAction(action)
