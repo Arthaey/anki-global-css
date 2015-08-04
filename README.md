@@ -8,8 +8,8 @@ This is useful if you want to have the same CSS shared between your models,
 work).
 
 It replaces all models' templates with the contents of your stylesheet file
-on startup. If you make changes to your file, restart Anki for them to take
-effect.
+on startup. If you make changes to your file, use the "Update global CSS" menu
+item or restart Anki for them to take effect.
 
 # Requirements
 
