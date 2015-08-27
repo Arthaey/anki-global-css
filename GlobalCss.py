@@ -45,4 +45,5 @@ addHook("profileLoaded", replaceCssForAllModels)
 
 action = QAction("Update global CSS", mw)
 mw.connect(action, SIGNAL("triggered()"), _manuallyReplaceCssForAllModels)
+mw.form.menuTools.addSeparator()
 mw.form.menuTools.addAction(action)
