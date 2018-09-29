@@ -26,5 +26,5 @@ are also on Github.
 
 # License
 
-This addon is licensed under the same license as Anki itself (GNU Affero General
+This addon is licensed under the same license as Anki itself(GNU Affero General
 Public License 3).
