@@ -4,12 +4,12 @@ Anki download ID: 1659096147
 
 An Anki add-on to keep all notes' CSS in sync with an external styleshet file.
 This is useful if you want to have the same CSS shared between your models,
-*and* you want the CSS available on mobile (where `@import &lt;file&gt;` doesn't
+*and* you want the CSS available on mobile (where `@import <file>` doesn't
 work).
 
 It replaces all models' templates with the contents of your stylesheet file
-on startup. If you make changes to your file, use the "Update global CSS" menu
-item or restart Anki for them to take effect.
+on startup. If you make changes to your file, use the
+**"Update global CSS" menu item** or restart Anki for them to take effect.
 
 # Requirements
 
