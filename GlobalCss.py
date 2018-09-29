@@ -4,7 +4,9 @@
 #
 # Also available for Anki at https://ankiweb.net/shared/info/ FIXME
 
+import codecs
 import os
+
 from PyQt4.QtCore import SIGNAL
 from PyQt4.QtGui import QAction
 from anki.hooks import addHook
@@ -18,7 +20,7 @@ def replaceCssForAllModels(manuallyTrigger=False):
     mediaDir = mw.col.media.dir()
     filename = unicode(os.path.join(mediaDir, STYLESHEET_FILENAME))
 
-    with open(filename, "r") as file:
+    with codecs.open(filename, "r", "utf-8") as file:
         css = file.read()
         updated = False
 
