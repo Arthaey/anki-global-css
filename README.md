@@ -1,6 +1,6 @@
 # Description
 
-Anki download ID:  FIXME
+Anki download ID: 1659096147
 
 An Anki add-on to keep all notes' CSS in sync with an external styleshet file.
 This is useful if you want to have the same CSS shared between your models,
@@ -19,7 +19,7 @@ item or restart Anki for them to take effect.
 
 Post a [new issue on Github](https://github.com/Arthaey/anki-global-css/issues/new)
 (or make a pull request!). You can also write a review or ask questions on the
-[Anki website for shared add-ons](https://ankiweb.net/shared/info/). FIXME
+[Anki website for shared add-ons](https://ankiweb.net/shared/info/1659096147).
 
 [My other Anki add-ons](https://github.com/search?q=user%3AArthaey+anki)
 are also on Github.

@@ -2,7 +2,7 @@
 # See github page to report issues or to contribute:
 # https://github.com/Arthaey/anki-global-css
 #
-# Also available for Anki at https://ankiweb.net/shared/info/ FIXME
+# Also available for Anki at https://ankiweb.net/shared/info/1659096147
 
 import codecs
 import os
