@@ -15,6 +15,8 @@ from aqt.utils import showInfo
 
 STYLESHEET_FILENAME = "_global.css"
 
+SHOW_ALERT = True
+
 
 def replaceCssForAllModels(manuallyTrigger=False):
     mediaDir = mw.col.media.dir()
@@ -34,9 +36,12 @@ def replaceCssForAllModels(manuallyTrigger=False):
         if updated:
             mw.col.save("Global CSS Updated")
             mw.col.reset()
-            showInfo("Global CSS updated.")
+            msg = "Global CSS updated."
         elif manuallyTrigger:
-            showInfo("Global CSS is already up-to-date.")
+            msg = "Global CSS is already up-to-date."
+
+        if SHOW_ALERT:
+            showInfo(msg)
 
 
 def _manuallyReplaceCssForAllModels():
